@@ -26,7 +26,9 @@
 
 ##### Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
 
-## [ link ](https://hackerrank-challenge-pdfs.s3.amazonaws.com/26276-mini-max-sum-English?AWSAccessKeyId=AKIAJ4WZFDFQTZRGO3QA&Expires=1534064724&Signature=V6TI6v5RGLxFUFLGtcJ3YBFW2NU%3D&response-content-disposition=inline%3B%20filename%3Dmini-max-sum-English.pdf&response-content-type=application%2Fpdf)
+[ link ](https://hackerrank-challenge-pdfs.s3.amazonaws.com/26276-mini-max-sum-English?AWSAccessKeyId=AKIAJ4WZFDFQTZRGO3QA&Expires=1534064724&Signature=V6TI6v5RGLxFUFLGtcJ3YBFW2NU%3D&response-content-disposition=inline%3B%20filename%3Dmini-max-sum-English.pdf&response-content-type=application%2Fpdf)
+
+---
 
 ## Question 5:
 
