@@ -1,5 +1,5 @@
 #include<iostream>
-#include<cstdlib>
+#include<cstdlib>// cmath can also be used
 
 using namespace std;
 
