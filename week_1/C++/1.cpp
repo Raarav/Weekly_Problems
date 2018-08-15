@@ -1,11 +1,11 @@
 #include<iostream>
-#include<math.h>
+#include<cstdlib>
 
 using namespace std;
 
 int main(){
 
-int matrix[][]={{1,2,3},{2,3,4},{4,5,6}}; // assuming this is the given matrix
+int matrix[3][3]={{1,2,9},{2,3,4},{4,5,6}}; // assuming this is the given matrix
 
 //TODO: if needed input the matrix from user
 int firstD=0, secondD=0;
@@ -17,8 +17,9 @@ firstD=firstD+matrix[i][i];
 secondD=secondD+matrix[i][2-i];
 
 }
-
-cout<<"absolute difference of the diagonals"<<abs(firstD-secondD);
+cout<<"sum of first diagonal is "<<firstD;
+cout<<"\n sum of second diagonal is "<<secondD;
+cout<<"\nabsolute difference of the diagonals "<<abs(firstD-secondD);
 
 return 0;
 }
