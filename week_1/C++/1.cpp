@@ -18,6 +18,7 @@ secondD=secondD+matrix[i][2-i];
 
 }
 
+cout<<"absolute difference of the diagonals"<<abs(firstD-secondD);
 
 return 0;
 }
