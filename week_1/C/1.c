@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<cstdlib>// cmath can also be used
+#include<stdlib.h>// cmath can also be used
 
 int main(){
 
@@ -14,7 +14,7 @@ scanf("%d",&order);
 
 for(i=0;i<order;i++){
     for(j=0;j<order;j++){
-        sccanf("%d",&matrix[i][j]);
+        scanf("%d",&matrix[i][j]);
     }
 }
 
