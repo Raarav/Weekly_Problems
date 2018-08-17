@@ -1,43 +1,94 @@
-## Question 1:
+# Questions
 
-##### Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+## Question 1
 
-[link](https://hackerrank-challenge-pdfs.s3.amazonaws.com/8662-diagonal-difference-English?AWSAccessKeyId=AKIAJ4WZFDFQTZRGO3QA&Expires=1534065197&Signature=52URnUge2C2S3V2rj3eaJQFkOKo%3D&response-content-disposition=inline%3B%20filename%3Ddiagonal-difference-English.pdf&response-content-type=application%2Fpdf)
+Given a square matrix, calculate the absolute difference between the sums of its diagonals.
 
----
+For example
 
-## Question 2:
+```bash
+  [1  2  3]
+  [4  5  6]
+  [7  8  9]
 
-##### Write a program that prints a staircase of size n.
+  The sum of main diagonal -> 1 + 5 + 9 = 15
+  The sum of another diagonal -> 3 + 5 + 7 = 15
+  So the absolute difference will be -> |15 - 15| = 0
+```
 
-[ link ](https://hackerrank-challenge-pdfs.s3.amazonaws.com/8636-staircase-English?AWSAccessKeyId=AKIAJ4WZFDFQTZRGO3QA&Expires=1534063981&Signature=dgLE730m6OYzVSRzg3rWm%2BH5qps%3D&response-content-disposition=inline%3B%20filename%3Dstaircase-English.pdf&response-content-type=application%2Fpdf)
+[Go to reference](https://www.hackerrank.com/challenges/diagonal-difference/problem)
 
----
+## Question 2
 
-## Question 3:
+Print a right aligned pattern for n like
 
-##### Given a time in 12-hour AM/PM format, convert it to military (24-hour) time. Note: Midnight is 12:00:00AM on a 12-hour clock, and 00:00:00 on a 24-hour clock. Noon is 12:00:00PM on a 12-hour clock, and 12:00:00 on a 24-hour clock.
+```bash
+   #
+  ##
+ ###
+####
+```
 
-[ link ](https://hackerrank-challenge-pdfs.s3.amazonaws.com/8649-time-conversion-English?AWSAccessKeyId=AKIAJ4WZFDFQTZRGO3QA&Expires=1534064167&Signature=unqVeUPDCOiLt5BuK3hKcya47Qg%3D&response-content-disposition=inline%3B%20filename%3Dtime-conversion-English.pdf&response-content-type=application%2Fpdf)
+where n is 4.
 
----
+Take input `n` where n stands for the number of line and the number of `#` in last line.
 
-## Question 4:
+[Go to reference](https://www.hackerrank.com/challenges/staircase/problem)
 
-##### Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+## Question 3
 
-[ link ](https://hackerrank-challenge-pdfs.s3.amazonaws.com/26276-mini-max-sum-English?AWSAccessKeyId=AKIAJ4WZFDFQTZRGO3QA&Expires=1534064724&Signature=V6TI6v5RGLxFUFLGtcJ3YBFW2NU%3D&response-content-disposition=inline%3B%20filename%3Dmini-max-sum-English.pdf&response-content-type=application%2Fpdf)
+Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.
+Input format will be in `hh:mm:ssAM`.
 
----
+For example
 
-## Question 5:
+```bash
+05:45:01PM
+The answer is 17:45:01
+```
 
-##### You are choreographing a circus show with various animals. For one act, you are given two kangaroos on a number line ready to jump in the positive direction (i.e, toward positive infinity).
+[Go to reference](https://www.hackerrank.com/challenges/time-conversion/problem)
+
+## Question 4
+
+Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+
+For example
+
+```bash
+Numbers -> 1 2 3 4 5
+Sum w/o 1 -> 2 + 3 + 4 + 5 = 14
+Sum w/o 2 -> 1 + 3 + 4 + 5 = 13
+Sum w/o 3 -> 1 + 2 + 4 + 5 = 12
+Sum w/o 4 -> 1 + 2 + 3 + 5 = 11
+Sum w/o 5 -> 1 + 2 + 3 + 4 = 10
+
+Minimum number is -> 10
+Maximum number is -> 14
+```
+
+[Go to reference](https://www.hackerrank.com/challenges/mini-max-sum/problem)
+
+## Question 5
+
+You are choreographing a circus show with various animals. For one act, you are given two kangaroos on a number line ready to jump in the positive direction (i.e, toward positive infinity).
 
 - The first kangaroo starts at location x1 and moves at a rate of v1 meters per jump.
 
 - The second kangaroo starts at location x2 and moves at a rate of v2 meters per jump.
 
-##### You have to figure out a way to get both kangaroos at the same location at the same time as part of the show. If it is possible, return YES, otherwise return NO.
+You have to figure out a way to get both kangaroos at the same location at the same time as part of the show. If it is possible, return YES, otherwise return NO.
 
-[ link ](https://hackerrank-challenge-pdfs.s3.amazonaws.com/22477-kangaroo-English?AWSAccessKeyId=AKIAJ4WZFDFQTZRGO3QA&Expires=1534064545&Signature=hzspejNviOLpyUrrviswPZYcNpY%3D&response-content-disposition=inline%3B%20filename%3Dkangaroo-English.pdf&response-content-type=application%2Fpdf)
+For example
+
+```bash
+  Input
+    x1 = 0  
+    v1 = 3  
+    x2 = 4  
+    v2 = 2
+  
+  Output -> YES
+```
+
+[Go to reference](https://www.hackerrank.com/challenges/kangaroo/problem)
