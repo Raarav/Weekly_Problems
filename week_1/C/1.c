@@ -3,16 +3,26 @@
 
 int main(){
 
-int matrix[3][3]={{1,2,9},{2,3,4},{4,5,6}}; // assuming this is the given matrix
+int matrix[50][50]; // assuming this is the given matrix
 
 //TODO: if needed input the matrix from user
 int firstD=0, secondD=0;
-int i=0;
-for( i=0; i<3; i++) // to do change the constant 3 with size of matrix
+int i=0,j=0,order;
+
+printf("enter the order of the matrix;(max limit is 50) ");
+scanf("%d",&order);
+
+for(i=0;i<order;i++){
+    for(j=0;j<order;j++){
+        sccanf("%d",&matrix[i][j]);
+    }
+}
+
+for( i=0; i<order; i++) // to do change the constant 3 with size of matrix
 {
 
 firstD=firstD+matrix[i][i];
-secondD=secondD+matrix[i][2-i]; // change 2 with number of column-1
+secondD=secondD+matrix[i][order-i-1]; // change 2 with number of column-1
 
 }
 printf("sum of first diagonal is %d",firstD);
