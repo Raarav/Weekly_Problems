@@ -20,7 +20,7 @@ error(hr,min,sec);
   cout<<"choose am or pm:";
   cin>>mode;
 
-  if(mode=="am" || mode=="AM"){
+  if(mode=="am" || mode=="AM" || mode=="Am"){
     if(hr==12){
       hr=0;
 
@@ -28,7 +28,7 @@ error(hr,min,sec);
 cout<<"⌚⏳ Time in 24 hr format:\n";
     cout<<hr<<":"<<min<<":"<<sec<<endl;
   }
-  else if(mode =="pm" || mode=="PM"){
+  else if(mode =="pm" || mode=="PM" || mode=="Pm"){
         if(hr==12){
             cout<<"⌚⏳ Time in 24 hr format:\n";
     cout<<hr<<":"<<min<<":"<<sec<<endl;
