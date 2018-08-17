@@ -7,7 +7,7 @@ Questions will be week-wise in `week_*/Readme.md`.
 
 To submit solutions
 
-1. Create a folder in `week_*` called `submissions` if not already created.
+1. Create a folder in `week_*` called `submissions` if not already created and then create a folder of your username.
 2. Add all the relevant files there.
 3. Commit and create a pull request.
 
