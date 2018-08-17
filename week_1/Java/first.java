@@ -1,23 +1,44 @@
-class first{
+import java.util.Scanner;
 
+public class Main
+{
+	public static void main(String[] args) {
+	    
 
-	public static void main(String[] args){
+		int matrix[][]; // assuming this is the given matrix
+		int order;
+		int count=0;
+		        Scanner sc = new Scanner(System.in);
 
+		System.out.println("Enterthe order of the matrix ");
+        order = sc.nextInt();
 
-		int matrix[3][3]={{1,2,9},{2,3,4},{4,5,6}}; // assuming this is the given matrix
+        matrix= new int[order][];
+            
+            for(int m[]:matrix){
+                matrix[count]=new int[order];
+                count++;
+            }
+            
+       for(int i=0;i<order;i++){
+           for(int p=0;p<order;p++){
+                       matrix[i][p] = sc.nextInt();
+
+           }
+       }
 
 		//TODO: if needed input the matrix from user
 		int firstD=0, secondD=0;
 
-		for(int i=0; i<3; i++)
+		for(int i=0; i<order; i++)
 		{
 
 			firstD=firstD+matrix[i][i];
-			secondD=secondD+matrix[i][2-i];
+			secondD=secondD+matrix[i][order-1-i];
 
 		}
 			
-		abs=first-second;
+		int abs=firstD-secondD;
 		if(abs<0)
 		abs=-abs;
 		
@@ -28,6 +49,4 @@ class first{
 
 
 	}
-
-
 }
