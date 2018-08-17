@@ -5,7 +5,10 @@ using namespace std;
 
 int main(){
 
-int matrix[3][3]={{1,2,9},{2,3,4},{4,5,6}}; // assuming this is the given matrix
+int matrix[3][3]; // assuming this is the given matrix
+int order;
+cout<<"enter the order of the matix";
+cin>>order;
 
 //TODO: if needed input the matrix from user
 int firstD=0, secondD=0;
