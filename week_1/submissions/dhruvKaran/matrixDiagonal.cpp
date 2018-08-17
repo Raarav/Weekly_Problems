@@ -4,13 +4,15 @@
 using namespace std;
 
 int main()
-{   int x,k,i,j,c,d;
+{   int x,k,i,j,l=0,op=0;
     cout<<"finding the absoulte diff of square of diagnals of 2 square matrix"<< "\n";
     cout<<"enter the dimenson of square matrix"<<"\n";
     cin >> x;
     
     int a[x][x];
     int b[x][x];
+    int d1[x];
+    int d2[x];
     for ( i=0; i<x;i++){
         for( j=0; j<x; j++){
             k = k+1;
@@ -37,18 +39,16 @@ int main()
     for( i =0 ; i<x;i++){
         for( j=0; j<x;j++){
             if(i == j){
-                c = (a[i][j])*a[i][j];
-                d = (b[i][j])*b[i][j];
-                if ((c-d)<0){
-                    cout<< -(c-d)<<"\n";
-                }
-                else{
-                cout<<c-d<<"\n";
-                }
+                d1[i] = a[i][j];
+               d2[i]= b[i][j];
             }
         }
     }
-    
-
+        for (i=0; i<x;i++){
+            l = l+ d1[i];
+            op = op +d2[i];
+        }
+        
+        (l-op)<0?cout<<-(l-op)<<"\n":cout<<l-op<<"\n";
     return 0;
 } 
