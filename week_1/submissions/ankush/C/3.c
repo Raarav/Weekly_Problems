@@ -5,26 +5,26 @@
 int main()
 {
     int h,m,s;
-    string Am_or_Pm;
+    char Am_or_Pm[40];
     printf( "enter following \n");
     printf("hours :  ");
     scanf("%d",&h);
     printf("minutes : ");
     scanf("%d",&m);
-    cout<<"seconds: ";
-    cin>>s;
-    cout<<"enter either am or pm  ";
-    cin>>Am_or_Pm;
+    printf("seconds: ");
+    scanf("%d",&s);
+    printf("enter either am or pm  ");
+    scanf("%d",Am_or_Pm);
 
-    if(Am_or_Pm=="am" ){
+    if(strcmpi(Am_or_Pm,"am" )){
         if(h==12)
         h=0;
-        cout<<"time in 24 hour format is"<<"\n"<<h<<"\:"<<m<<"\:"<<s<<"\n";
+        printf("time in 24 hour format is \n %d : %d : %d \n",h,m,s);
 
     }
     else{
     h = h+12;
-    cout<<"time is"<<"\n"<<h<<"\:"<<m<<"\:"<<s<<"\t"<<Am_or_Pm<<"\n";
+        printf("time in 24 hour format is \n %d : %d : %d \n",h,m,s);
 }
 
     return 0;
