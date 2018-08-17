@@ -14,7 +14,7 @@ int main() {
     } 
     // for 
     for(j=0;j<k+1;j++)
-    cout<<"*";
+    cout<<"#";
     //back to the loop of k and n
     cout<<"\n";
     }   
