@@ -1,11 +1,10 @@
 
-def convert_to_24(time):
-    time, half_day = time[:-2], time[-2:].lower()
-    if half_day == 'am':
-        return time
-    elif half_day == 'pm':
-        split = time.find(':')
-        return str(int(time[:split]) + 12) + time[split:]
+def conversion(time1):
+    time1, day = time1[:-2], time1[-2:].lower()
+    if day == 'am':
+        return time1
+    elif day == 'pm':									
+        return str(int(time1[0:2]) + 12) + time1[2:]
         
-convert_to_24("05:45:01PM")
+print(conversion("05:45:01PM"))
 
