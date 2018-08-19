@@ -20,7 +20,7 @@ here n is 5.
 Given an array of integers, find a combination of four elements in the array whose sum is equal to a given value X.
 
 Input:
-First line consists of an integer N, denoting the number of elements in an array. Second line consists of N spaced array elements. Third line of will have X.
+First line consists of an integer N, denoting the number of elements in an array. Second line consists of N spaced array elements. Third line of input will have X.
 
 Output:
 Single line output, print 1 if combination is found else 0.
