@@ -14,5 +14,6 @@ To submit solutions
 ## All questions
 
 1. [Week 1](/week_1)
+1. [Week 2](/week_2)
 
 End
