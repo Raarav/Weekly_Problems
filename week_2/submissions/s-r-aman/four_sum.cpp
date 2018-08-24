@@ -19,7 +19,7 @@ int tell_me_the_truth_about_four_numbers(int list[], int sum, int index, int len
 
   if (index > 3)
   {
-    if ((sum + list[index + 1]) == to_find && tracker > 3)
+    if ((sum + list[index]) == to_find && tracker > 3)
     {
       // cout << "I ran too " << index << "," << sum
       //  << endl;
@@ -38,7 +38,7 @@ int main()
 {
   int len;
   // Debug
-  cout << "Enter the lenth of array 👉 ";
+  cout << "Enter the length of array 👉 ";
   cin >> len;
 
   int list[len];
