@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int n, a[5], b[5];
+    int n, a[6], b[15];
     cout<<"Enter the number of elements : "<<endl;
     cin>>n;
     cout<<"Enter the elements : "<<endl;
@@ -13,36 +13,38 @@ int main()
     cout<<"\nNumbers -> ";
     for(int i=0; i<n; i++)
     {
-        cout<<a[i];
+        cout<<" "<<a[i];
     }
     cout<<"\n";
-    for(int i=0; i<n; i++)
+    for(int i=0; i<15; i++)
     {
         int sum = 0;
-        for(int j=0; j<=n-1; j++)
+        for(int j=0; j<=n-2; j++)
         {
-            if(i==j){
+            if(i==j) {
                 continue;
             }
             else{
                 sum = sum + a[j];
             }
         }
-        cout<<"sum w/0 "<<i+1<<" -> "<<sum<<endl;
+        cout<<"Sum w/0 "<<i+1<<" -> "<<sum<<endl;
         b[i] = sum;
     }
-    int max = b[0];
-    int min = b[0];
-    for(int i=0; i<5; i++)
-    {
-        if(b[i]>max){
-            max = b[i];
+    int i, cnt=0, x;
+    cout<<"Enter the element to search : "<<endl;
+    cin>>x;
+    for(i=0; i<n; i++)
+        {
+                if(b[i]==x)
+                {
+                        cnt=1;
+                        break;
+                }
         }
-        else if(b[i]<min){
-            min = b[i];
-        }
-    }
-    cout<<"Minimum number is -> "<<min<<endl;
-    cout<<"Maximum number is -> "<<max<<endl;
+    if(cnt==1)
+        cout<<"1";
+    else
+        cout<<"0";
     return 0;
 }
