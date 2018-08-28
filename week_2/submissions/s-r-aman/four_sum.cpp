@@ -9,7 +9,8 @@ int tell_me_the_truth_about_four_numbers(
     int tracker_1 = 1,
     int tracker_2 = 2,
     int tracker_3 = 3,
-    int tracker_4 = 4)
+    int tracker_4 = 4,
+    int called = 0)
 {
   int sum = list[tracker_1 - 1] + list[tracker_2 - 1] + list[tracker_3 - 1] + list[tracker_4 - 1];
   if (sum == to_find)
@@ -22,31 +23,38 @@ int tell_me_the_truth_about_four_numbers(
     return 0;
   }
 
-  if (tracker_4 < len)
+  bool check = false;
+
+  if (tracker_4 < len && !check)
   {
     tracker_4 = tracker_4 + 1;
+    check = true;
   }
 
-  if (tracker_4 == len && len >= tracker_3 + 2)
+  if (tracker_4 == len && len >= tracker_3 + 2 && !check)
   {
     tracker_4 = tracker_3 + 2;
     tracker_3 = tracker_3 + 1;
+    check = true;
   }
-  if (tracker_3 == len - 1 && len >= tracker_2 + 3)
+  if (tracker_3 == len - 1 && len >= tracker_2 + 3 && !check)
   {
     tracker_4 = tracker_2 + 3;
     tracker_3 = tracker_2 + 2;
     tracker_2 = tracker_2 + 1;
+    check = true;
   }
-  if (tracker_2 == len - 2 && len >= tracker_1 + 4)
+  if (tracker_2 == len - 2 && len >= tracker_1 + 4 && !check)
   {
     tracker_4 = tracker_1 + 4;
     tracker_3 = tracker_1 + 3;
     tracker_2 = tracker_1 + 2;
     tracker_1 = tracker_1 + 1;
+    check = true;
   }
 
-  return tell_me_the_truth_about_four_numbers(list, len, to_find, tracker_1, tracker_2, tracker_3, tracker_4);
+  called = called + 1;
+  return tell_me_the_truth_about_four_numbers(list, len, to_find, tracker_1, tracker_2, tracker_3, tracker_4, called);
 }
 
 int main()
