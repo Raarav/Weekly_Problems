@@ -2,36 +2,51 @@
 
 using namespace std;
 
-int tell_me_the_truth_about_four_numbers(int list[], int sum, int index, int len, int to_find, int tracker)
+int tell_me_the_truth_about_four_numbers(
+    int list[],
+    int len,
+    int to_find,
+    int tracker_1 = 1,
+    int tracker_2 = 2,
+    int tracker_3 = 3,
+    int tracker_4 = 4)
 {
-  // cout << sum << endl;
-  // cout << "Index => " << index << endl;
-  if (sum == to_find && tracker > 3)
+  int sum = list[tracker_1 - 1] + list[tracker_2 - 1] + list[tracker_3 - 1] + list[tracker_4 - 1];
+  if (sum == to_find)
   {
-    // cout << "I ran";
     return 1;
   }
 
-  if (index == len)
+  if (tracker_1 == len - 3 && tracker_2 == len - 2 && tracker_3 == len - 1 && tracker_4 == len)
   {
     return 0;
   }
 
-  if (index > 3)
+  if (tracker_4 < len)
   {
-    if ((sum + list[index]) == to_find && tracker > 3)
-    {
-      // cout << "I ran too " << index << "," << sum
-      //  << endl;
-      return 1;
-    }
-    else
-    {
-      return tell_me_the_truth_about_four_numbers(list, sum, index + 1, len, to_find, tracker);
-    }
+    tracker_4 = tracker_4 + 1;
   }
 
-  return tell_me_the_truth_about_four_numbers(list, sum + list[index], index + 1, len, to_find, tracker + 1);
+  if (tracker_4 == len && len >= tracker_3 + 2)
+  {
+    tracker_4 = tracker_3 + 2;
+    tracker_3 = tracker_3 + 1;
+  }
+  if (tracker_3 == len - 1 && len >= tracker_2 + 3)
+  {
+    tracker_4 = tracker_2 + 3;
+    tracker_3 = tracker_2 + 2;
+    tracker_2 = tracker_2 + 1;
+  }
+  if (tracker_2 == len - 2 && len >= tracker_1 + 4)
+  {
+    tracker_4 = tracker_2 + 4;
+    tracker_3 = tracker_2 + 3;
+    tracker_2 = tracker_2 + 2;
+    tracker_1 = tracker_2 + 1;
+  }
+
+  return tell_me_the_truth_about_four_numbers(list, len, to_find, tracker_1, tracker_2, tracker_3, tracker_4);
 }
 
 int main()
@@ -54,16 +69,9 @@ int main()
   cout << "Enter the sum to find 🔎" << endl;
   cin >> to_find;
 
-  bool answer = false;
+  bool answer = tell_me_the_truth_about_four_numbers(list, len, to_find);
 
-  for (int i = 0; i < len; i++)
-  {
-    if (answer)
-      break;
-    answer = tell_me_the_truth_about_four_numbers(list, 0, i, len, to_find, 0);
-  }
-
-  cout << endl;
-  cout << answer << endl;
+  cout << endl
+       << answer << endl;
   cout << "😭 I Still doubt it! Please test it roughly!";
 }
