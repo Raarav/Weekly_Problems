@@ -40,10 +40,10 @@ int tell_me_the_truth_about_four_numbers(
   }
   if (tracker_2 == len - 2 && len >= tracker_1 + 4)
   {
-    tracker_4 = tracker_2 + 4;
-    tracker_3 = tracker_2 + 3;
-    tracker_2 = tracker_2 + 2;
-    tracker_1 = tracker_2 + 1;
+    tracker_4 = tracker_1 + 4;
+    tracker_3 = tracker_1 + 3;
+    tracker_2 = tracker_1 + 2;
+    tracker_1 = tracker_1 + 1;
   }
 
   return tell_me_the_truth_about_four_numbers(list, len, to_find, tracker_1, tracker_2, tracker_3, tracker_4);
@@ -71,7 +71,7 @@ int main()
 
   bool answer = tell_me_the_truth_about_four_numbers(list, len, to_find);
 
-  cout << endl
-       << answer << endl;
+  cout << endl;
+  cout << answer << endl;
   cout << "😭 I Still doubt it! Please test it roughly!";
 }
