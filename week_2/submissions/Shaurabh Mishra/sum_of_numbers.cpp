@@ -28,7 +28,7 @@ int main()
                 sum = sum + a[j];
             }
         }
-        //cout<<"Sum w/0 "<<i+1<<" -> "<<sum<<endl;
+        cout<<"Sum w/0 "<<i+1<<" -> "<<sum<<endl;
         b[i] = sum;
     }
     int i, cnt=0, x;
@@ -48,3 +48,4 @@ int main()
         cout<<"0";
     return 0;
 }
+
