@@ -16,6 +16,7 @@ int main()
             if(word[i+1]!=97 && word[i+1]!=101 && word[i+1]!=105 && word[i+1]!=111 && word[i+1]!=117)
             {
                 cout<<"NO";
+                check=1;
                 break;
             }
 
